@@ -38,7 +38,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_training:
     staging:
-      +materialized: view
+      jaffle_shop:
+      stripe:
+        +materialized: view
       
     marts:
-      +materialized: table
+      finance:
+      marketing:
+        +materialized: table
