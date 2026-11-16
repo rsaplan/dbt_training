@@ -1,23 +1,14 @@
+{{ config(materialized='table') }}
+
 with customers as (
 
-    select
-        id as customer_id,
-        first_name,
-        last_name
-
-    from GWU_ANALYTICS_DEV.RSAPLAN.customers
+    select * from {{ ref('stg_jaffle_shop__customers') }}
 
 ),
 
 orders as (
 
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from GWU_ANALYTICS_DEV.RSAPLAN.orders
+    select * from {{ ref('stg_jaffle_shop__orders') }}
 
 ),
 
