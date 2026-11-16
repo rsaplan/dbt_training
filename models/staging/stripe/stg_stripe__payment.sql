@@ -7,4 +7,4 @@ select
         created as payment_created,
         _batched_at
 
-from GWU_ANALYTICS_DEV.RSAPLAN.payment
+from {{ source('stripe', 'payment') }}
