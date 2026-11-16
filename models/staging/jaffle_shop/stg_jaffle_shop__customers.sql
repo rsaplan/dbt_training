@@ -3,4 +3,4 @@ select
         first_name,
         last_name
 
-    from GWU_ANALYTICS_DEV.RSAPLAN.customers
+    from {{ source('jaffle_shop', 'customers') }}

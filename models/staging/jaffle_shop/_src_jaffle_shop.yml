@@ -1,0 +1,7 @@
+sources:
+  - name: jaffle_shop
+    database: gwu_analytics_dev
+    schema: rsaplan
+    tables:
+      - name: customers
+      - name: orders

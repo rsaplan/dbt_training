@@ -4,4 +4,4 @@ select
         order_date,
         status
 
-    from GWU_ANALYTICS_DEV.RSAPLAN.orders
+    from {{ source('jaffle_shop', 'orders') }}
