@@ -1,0 +1,6 @@
+sources:
+  - name: stripe
+    database: gwu_analytics_dev
+    schema: rsaplan
+    tables:
+      - name: payment
